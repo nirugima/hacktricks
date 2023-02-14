@@ -2,7 +2,7 @@
 
 <details>
 
-<summary><a href="https://www.twitch.tv/hacktricks_live/schedule"><strong>🎙️ HackTricks LIVE Twitch</strong></a> <strong>Wednesdays 5.30pm (UTC) 🎙️ -</strong> <a href="https://www.youtube.com/@hacktricks_LIVE"><strong>🎥 Youtube 🎥</strong></a></summary>
+<summary>📝<a href="https://www.twitch.tv/hacktricks_live/schedule"> <strong></strong> </a><mark style="color:blue;"><strong>Breached Write Content</strong></mark><strong> Wednesdays</strong></summary>
 
 * Do you work in a **cybersecurity company**? Do you want to see your **company advertised in HackTricks**? or do you want to have access to the **latest version of the PEASS or download HackTricks in PDF**? Check the [**SUBSCRIPTION PLANS**](https://github.com/sponsors/carlospolop)!
 * Discover [**The PEASS Family**](https://opensea.io/collection/the-peass-family), our collection of exclusive [**NFTs**](https://opensea.io/collection/the-peass-family)
@@ -258,7 +258,7 @@ You must **configure a SPF record for the new domain**. If you don't know what i
 
 You can use [https://www.spfwizard.net/](https://www.spfwizard.net) to generate your SPF policy (use the IP of the VPS machine)
 
-![](<../../.gitbook/assets/image (388).png>)
+![](../../.gitbook/assets/image%20\(388\).png)
 
 This is the content that must be set inside a TXT record inside the domain:
 
@@ -337,7 +337,7 @@ The page www.mail-tester.com can indicate you if you your domain is being blocke
 * Decide from which account are you going to send the phishing emails. Suggestions: _noreply, support, servicedesk, salesforce..._
 * You can leave blank the username and password, but make sure to check the Ignore Certificate Errors
 
-![](<../../.gitbook/assets/image (253) (1) (2) (1) (1) (2) (2) (3) (3) (5) (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (10).png>)
+![](../../.gitbook/assets/image%20\(253\)%20\(1\)%20\(2\)%20\(1\)%20\(1\)%20\(2\)%20\(2\)%20\(3\)%20\(3\)%20\(5\)%20\(3\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(10\).png)
 
 {% hint style="info" %}
 It's recommended to use the "**Send Test Email**" functionality to test that everything is working.\
@@ -378,7 +378,7 @@ Note that **in order to increase the credibility of the email**, it's recommende
 * Search for **public emails** like info@ex.com or press@ex.com or public@ex.com and send them an email and wait for the response.
 * Try to contact **some valid discovered** email and wait for the response
 
-![](<../../.gitbook/assets/image (393).png>)
+![](../../.gitbook/assets/image%20\(393\).png)
 
 {% hint style="info" %}
 The Email Template also allows to **attach files to send**. If you would also like to steal NTLM challenges using some specially crafted files/documents [read this page](../../windows-hardening/ntlm/places-to-steal-ntlm-creds.md).
@@ -391,7 +391,7 @@ The Email Template also allows to **attach files to send**. If you would also li
 * Mark **Capture Submitted Data** and **Capture Passwords**
 * Set a **redirection**
 
-![](<../../.gitbook/assets/image (394).png>)
+![](../../.gitbook/assets/image%20\(394\).png)
 
 {% hint style="info" %}
 Usually you will need to modify the HTML code of the page and make some tests in local (maybe using some Apache server) **until you like the results.** Then, write that HTML code in the box.\
@@ -407,7 +407,7 @@ For the redirection you could **redirect the users to the legit main web page** 
 * Set a name
 * **Import the data** (note that in order to use the template for the example you need the firstname, last name and email address of each user)
 
-![](<../../.gitbook/assets/image (395).png>)
+![](../../.gitbook/assets/image%20\(395\).png)
 
 ### Campaign
 
@@ -415,7 +415,7 @@ Finally, create a campaign selecting a name, the email template, the landing pag
 
 Note that the **Sending Profile allow to send a test email to see how will the final phishing email looks like**:
 
-![](<../../.gitbook/assets/image (396).png>)
+![](../../.gitbook/assets/image%20\(396\).png)
 
 {% hint style="info" %}
 I would recommend to **send the test emails to 10min mails addresses** in order to avoid getting blacklisted making tests.
@@ -483,7 +483,7 @@ Use [**Phishious** ](https://github.com/Rices/Phishious)to evaluate if your emai
 
 <details>
 
-<summary><a href="https://www.twitch.tv/hacktricks_live/schedule"><strong>🎙️ HackTricks LIVE Twitch</strong></a> <strong>Wednesdays 5.30pm (UTC) 🎙️ -</strong> <a href="https://www.youtube.com/@hacktricks_LIVE"><strong>🎥 Youtube 🎥</strong></a></summary>
+<summary>📝<a href="https://www.twitch.tv/hacktricks_live/schedule"> <strong></strong> </a><mark style="color:blue;"><strong>Breached Write Content</strong></mark><strong> Wednesdays</strong></summary>
 
 * Do you work in a **cybersecurity company**? Do you want to see your **company advertised in HackTricks**? or do you want to have access to the **latest version of the PEASS or download HackTricks in PDF**? Check the [**SUBSCRIPTION PLANS**](https://github.com/sponsors/carlospolop)!
 * Discover [**The PEASS Family**](https://opensea.io/collection/the-peass-family), our collection of exclusive [**NFTs**](https://opensea.io/collection/the-peass-family)

@@ -2,7 +2,7 @@
 
 <details>
 
-<summary><a href="https://www.twitch.tv/hacktricks_live/schedule"><strong>🎙️ HackTricks LIVE Twitch</strong></a> <strong>Wednesdays 5.30pm (UTC) 🎙️ -</strong> <a href="https://www.youtube.com/@hacktricks_LIVE"><strong>🎥 Youtube 🎥</strong></a></summary>
+<summary>📝<a href="https://www.twitch.tv/hacktricks_live/schedule"> <strong></strong> </a><mark style="color:blue;"><strong>Breached Write Content</strong></mark><strong> Wednesdays</strong></summary>
 
 * Do you work in a **cybersecurity company**? Do you want to see your **company advertised in HackTricks**? or do you want to have access to the **latest version of the PEASS or download HackTricks in PDF**? Check the [**SUBSCRIPTION PLANS**](https://github.com/sponsors/carlospolop)!
 * Discover [**The PEASS Family**](https://opensea.io/collection/the-peass-family), our collection of exclusive [**NFTs**](https://opensea.io/collection/the-peass-family)
@@ -12,7 +12,7 @@
 
 </details>
 
-![](<../.gitbook/assets/image (9) (1) (2).png>)
+![](../.gitbook/assets/image%20\(9\)%20\(1\)%20\(2\).png)
 
 \
 Use [**Trickest**](https://trickest.io/) to easily build and **automate workflows** powered by the world's **most advanced** community tools.\
@@ -100,7 +100,7 @@ done < $passfile
 ```
 {% endcode %}
 
-![](<../../../.gitbook/assets/image (417).png>)
+![](../../../.gitbook/assets/image%20\(417\).png)
 
 ## Google Chrome
 
@@ -142,7 +142,7 @@ In the previous folder, you can also find the file V01.log. In case the **modifi
 
 Once **recovered** this artifact (It's an ESE database, photorec can recover it with the options Exchange Database or EDB) you can use the program [ESEDatabaseView](https://www.nirsoft.net/utils/ese\_database\_view.html) to open it. Once **opened**, go to the table named "**Containers**".
 
-![](<../../../.gitbook/assets/image (446).png>)
+![](../../../.gitbook/assets/image%20\(446\).png)
 
 Inside this table, you can find in which other tables or containers each part of the stored information is saved. Following that, you can find the **locations of the data** stored by the browsers and the **metadata** that is inside.
 
@@ -199,7 +199,7 @@ Session cookies will reside in memory and persistent cookie in the disk.
 
 Checking the tool [ESEDatabaseView](https://www.nirsoft.net/utils/ese\_database\_view.html) you can find the container with the metadata of the downloads:
 
-![](<../../../.gitbook/assets/image (445).png>)
+![](../../../.gitbook/assets/image%20\(445\).png)
 
 Getting the information of the column "ResponseHeaders" you can transform from hex that information and obtain the URL, the file type and the location of the downloaded file.
 
@@ -268,7 +268,7 @@ Opera **stores browser history and download data in the exact same format as Goo
 * **Browser’s built-in anti-phishing:** `grep --color 'fraud_protection_enabled' ~/Library/Application Support/com.operasoftware.Opera/Preferences`
   * **fraud\_protection\_enabled** should be **true**
 
-![](<../.gitbook/assets/image (9) (1) (2).png>)
+![](../.gitbook/assets/image%20\(9\)%20\(1\)%20\(2\).png)
 
 \
 Use [**Trickest**](https://trickest.io/) to easily build and **automate workflows** powered by the world's **most advanced** community tools.\
@@ -278,7 +278,7 @@ Get Access Today:
 
 <details>
 
-<summary><a href="https://www.twitch.tv/hacktricks_live/schedule"><strong>🎙️ HackTricks LIVE Twitch</strong></a> <strong>Wednesdays 5.30pm (UTC) 🎙️ -</strong> <a href="https://www.youtube.com/@hacktricks_LIVE"><strong>🎥 Youtube 🎥</strong></a></summary>
+<summary>📝<a href="https://www.twitch.tv/hacktricks_live/schedule"> <strong></strong> </a><mark style="color:blue;"><strong>Breached Write Content</strong></mark><strong> Wednesdays</strong></summary>
 
 * Do you work in a **cybersecurity company**? Do you want to see your **company advertised in HackTricks**? or do you want to have access to the **latest version of the PEASS or download HackTricks in PDF**? Check the [**SUBSCRIPTION PLANS**](https://github.com/sponsors/carlospolop)!
 * Discover [**The PEASS Family**](https://opensea.io/collection/the-peass-family), our collection of exclusive [**NFTs**](https://opensea.io/collection/the-peass-family)

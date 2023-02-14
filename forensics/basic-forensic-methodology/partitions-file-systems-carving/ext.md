@@ -1,23 +1,18 @@
-
+# EXT
 
 <details>
 
-<summary><strong><a href="https://www.twitch.tv/hacktricks_live/schedule">🎙️ HackTricks LIVE Twitch</a> Wednesdays 5.30pm (UTC) 🎙️ - <a href="https://www.youtube.com/@hacktricks_LIVE">🎥 Youtube 🎥</a></strong></summary>
+<summary>📝<a href="https://www.twitch.tv/hacktricks_live/schedule"> <strong></strong> </a><mark style="color:blue;"><strong>Breached Write Content</strong></mark><strong> Wednesdays</strong></summary>
 
-- Do you work in a **cybersecurity company**? Do you want to see your **company advertised in HackTricks**? or do you want to have access to the **latest version of the PEASS or download HackTricks in PDF**? Check the [**SUBSCRIPTION PLANS**](https://github.com/sponsors/carlospolop)!
-
-- Discover [**The PEASS Family**](https://opensea.io/collection/the-peass-family), our collection of exclusive [**NFTs**](https://opensea.io/collection/the-peass-family)
-
-- Get the [**official PEASS & HackTricks swag**](https://peass.creator-spring.com)
-
-- **Join the** [**💬**](https://emojipedia.org/speech-balloon/) [**Discord group**](https://discord.gg/hRep4RUj7f) or the [**telegram group**](https://t.me/peass) or **follow** me on **Twitter** [**🐦**](https://github.com/carlospolop/hacktricks/tree/7af18b62b3bdc423e11444677a6a73d4043511e9/\[https:/emojipedia.org/bird/README.md)[**@carlospolopm**](https://twitter.com/carlospolopm)**.**
-
-- **Share your hacking tricks by submitting PRs to the [hacktricks repo](https://github.com/carlospolop/hacktricks) and [hacktricks-cloud repo](https://github.com/carlospolop/hacktricks-cloud)**.
+* Do you work in a **cybersecurity company**? Do you want to see your **company advertised in HackTricks**? or do you want to have access to the **latest version of the PEASS or download HackTricks in PDF**? Check the [**SUBSCRIPTION PLANS**](https://github.com/sponsors/carlospolop)!
+* Discover [**The PEASS Family**](https://opensea.io/collection/the-peass-family), our collection of exclusive [**NFTs**](https://opensea.io/collection/the-peass-family)
+* Get the [**official PEASS & HackTricks swag**](https://peass.creator-spring.com)
+* **Join the** [**💬**](https://emojipedia.org/speech-balloon/) [**Discord group**](https://discord.gg/hRep4RUj7f) or the [**telegram group**](https://t.me/peass) or **follow** me on **Twitter** [**🐦**](https://github.com/carlospolop/hacktricks/tree/7af18b62b3bdc423e11444677a6a73d4043511e9/\[https:/emojipedia.org/bird/README.md)[**@carlospolopm**](https://twitter.com/carlospolopm)**.**
+* **Share your hacking tricks by submitting PRs to the** [**hacktricks repo**](https://github.com/carlospolop/hacktricks) **and** [**hacktricks-cloud repo**](https://github.com/carlospolop/hacktricks-cloud).
 
 </details>
 
-
-# Ext - Extended Filesystem
+## Ext - Extended Filesystem
 
 **Ext2** is the most common filesystem for **not journaling** partitions (**partitions that don't change much**) like the boot partition. **Ext3/4** are **journaling** and are used usually for the **rest partitions**.
 
@@ -32,9 +27,9 @@ Every block group contains the following pieces of information:
 * inode table: it consists of a series of consecutive blocks, each of which contains a predefined Figure 1 Ext2 inode number of inodes. All inodes have the same size: 128 bytes. A 1,024 byte block contains 8 inodes, while a 4,096-byte block contains 32 inodes. Note that in Ext2, there is no need to store on disk a mapping between an inode number and the corresponding block number because the latter value can be derived from the block group number and the relative position inside the inode table. For example, suppose that each block group contains 4,096 inodes and that we want to know the address on the disk of inode 13,021. In this case, the inode belongs to the third block group and its disk address is stored in the 733rd entry of the corresponding inode table. As you can see, the inode number is just a key used by the Ext2 routines to retrieve the proper inode descriptor on the disk quickly
 * data blocks, containing files. Any block which does not contain any meaningful information is said to be free.
 
-![](<../../../.gitbook/assets/image (406).png>)
+![](../../../.gitbook/assets/image%20\(406\).png)
 
-## Ext Optional Features
+### Ext Optional Features
 
 **Features affect where** the data is located, **how** the data is stored in inodes and some of them might supply **additional metadata** for analysis, therefore features are important in Ext.
 
@@ -52,7 +47,7 @@ A suspected attacker might have non-standard extensions
 
 **Any utility** that reads the **superblock** will be able to indicate the **features** of an **Ext filesystem**, but you could also use `file -sL /dev/sd*`
 
-## Superblock
+### Superblock
 
 The superblock is the first 1024 bytes from the start and it's repeated in the first block of each group and contains:
 
@@ -78,12 +73,12 @@ fsstat -o <offsetstart> /pat/to/filesystem-file.ext
 You can also use the free GUI application: [https://www.disk-editor.org/index.html](https://www.disk-editor.org/index.html)\
 Or you can also use **python** to obtain the superblock information: [https://pypi.org/project/superblock/](https://pypi.org/project/superblock/)
 
-## inodes
+### inodes
 
 The **inodes** contain the list of **blocks** that **contains** the actual **data** of a **file**.\
 If the file is big, and inode **may contain pointers** to **other inodes** that point to the blocks/more inodes containing the file data.
 
-![](<../../../.gitbook/assets/image (416).png>)
+![](../../../.gitbook/assets/image%20\(416\).png)
 
 In **Ext2** and **Ext3** inodes are of size **128B**, **Ext4** currently uses **156B** but allocates **256B** on disk to allow a future expansion.
 
@@ -103,7 +98,7 @@ Inode structure:
 | 0xC    | 4    | Blocks Io         | Lower 32 bits of block count                     |
 | 0x20   | 4    | Flags             | Flags                                            |
 | 0x24   | 4    | Union osd1        | Linux: I version                                 |
-| 0x28   | 69   | Block\[15]        | 15 points to data block                         |
+| 0x28   | 69   | Block\[15]        | 15 points to data block                          |
 | 0x64   | 4    | Version           | File version for NFS                             |
 | 0x68   | 4    | File ACL low      | Lower 32 bits of extended attributes (ACL, etc)  |
 | 0x6C   | 4    | File size hi      | Upper 32 bits of file size (ext4 only)           |
@@ -169,24 +164,24 @@ icat -o <start offset> /path/to/image.ext 657103 #Cat the file
 
 File Mode
 
-| Number | Description                                                                                         |
-| ------ | --------------------------------------------------------------------------------------------------- |
-| **15** | **Reg/Slink-13/Socket-14**                                                                          |
-| **14** | **Directory/Block Bit 13**                                                                          |
-| **13** | **Char Device/Block Bit 14**                                                                        |
-| **12** | **FIFO**                                                                                            |
-| 11     | Set UID                                                                                             |
-| 10     | Set GID                                                                                             |
-| 9      | Sticky Bit (without it, anyone with Write & exec perms on a directory can delete and rename files)  |
-| 8      | Owner Read                                                                                          |
-| 7      | Owner Write                                                                                         |
-| 6      | Owner Exec                                                                                          |
-| 5      | Group Read                                                                                          |
-| 4      | Group Write                                                                                         |
-| 3      | Group Exec                                                                                          |
-| 2      | Others Read                                                                                         |
-| 1      | Others Write                                                                                        |
-| 0      | Others Exec                                                                                         |
+| Number | Description                                                                                        |
+| ------ | -------------------------------------------------------------------------------------------------- |
+| **15** | **Reg/Slink-13/Socket-14**                                                                         |
+| **14** | **Directory/Block Bit 13**                                                                         |
+| **13** | **Char Device/Block Bit 14**                                                                       |
+| **12** | **FIFO**                                                                                           |
+| 11     | Set UID                                                                                            |
+| 10     | Set GID                                                                                            |
+| 9      | Sticky Bit (without it, anyone with Write & exec perms on a directory can delete and rename files) |
+| 8      | Owner Read                                                                                         |
+| 7      | Owner Write                                                                                        |
+| 6      | Owner Exec                                                                                         |
+| 5      | Group Read                                                                                         |
+| 4      | Group Write                                                                                        |
+| 3      | Group Exec                                                                                         |
+| 2      | Others Read                                                                                        |
+| 1      | Others Write                                                                                       |
+| 0      | Others Exec                                                                                        |
 
 The bold bits (12, 13, 14, 15) indicate the type of file the file is (a directory, socket...) only one of the options in bold may exit.
 
@@ -229,28 +224,21 @@ getfattr file.txt #Get extended attribute names of a file
 getdattr -n 'user.secret' file.txt #Get extended attribute called "user.secret"
 ```
 
-## Filesystem View
+### Filesystem View
 
 To see the contents of the file system, you can **use the free tool**: [https://www.disk-editor.org/index.html](https://www.disk-editor.org/index.html)\
 Or you can mount it in your linux using `mount` command.
 
-[https://piazza.com/class\_profile/get\_resource/il71xfllx3l16f/inz4wsb2m0w2oz#:\~:text=The%20Ext2%20file%20system%20divides,lower%20average%20disk%20seek%20time.](https://piazza.com/class\_profile/get\_resource/il71xfllx3l16f/inz4wsb2m0w2oz#:\~:text=The%20Ext2%20file%20system%20divides,lower%20average%20disk%20seek%20time.)
-
+[https://piazza.com/class\_profile/get\_resource/il71xfllx3l16f/inz4wsb2m0w2oz#:\~:text=The%20Ext2%20file%20system%20divides,lower%20average%20disk%20seek%20time.](https://piazza.com/class\_profile/get\_resource/il71xfllx3l16f/inz4wsb2m0w2oz)
 
 <details>
 
-<summary><strong><a href="https://www.twitch.tv/hacktricks_live/schedule">🎙️ HackTricks LIVE Twitch</a> Wednesdays 5.30pm (UTC) 🎙️ - <a href="https://www.youtube.com/@hacktricks_LIVE">🎥 Youtube 🎥</a></strong></summary>
+<summary>📝<a href="https://www.twitch.tv/hacktricks_live/schedule"> <strong></strong> </a><mark style="color:blue;"><strong>Breached Write Content</strong></mark><strong> Wednesdays</strong></summary>
 
-- Do you work in a **cybersecurity company**? Do you want to see your **company advertised in HackTricks**? or do you want to have access to the **latest version of the PEASS or download HackTricks in PDF**? Check the [**SUBSCRIPTION PLANS**](https://github.com/sponsors/carlospolop)!
-
-- Discover [**The PEASS Family**](https://opensea.io/collection/the-peass-family), our collection of exclusive [**NFTs**](https://opensea.io/collection/the-peass-family)
-
-- Get the [**official PEASS & HackTricks swag**](https://peass.creator-spring.com)
-
-- **Join the** [**💬**](https://emojipedia.org/speech-balloon/) [**Discord group**](https://discord.gg/hRep4RUj7f) or the [**telegram group**](https://t.me/peass) or **follow** me on **Twitter** [**🐦**](https://github.com/carlospolop/hacktricks/tree/7af18b62b3bdc423e11444677a6a73d4043511e9/\[https:/emojipedia.org/bird/README.md)[**@carlospolopm**](https://twitter.com/carlospolopm)**.**
-
-- **Share your hacking tricks by submitting PRs to the [hacktricks repo](https://github.com/carlospolop/hacktricks) and [hacktricks-cloud repo](https://github.com/carlospolop/hacktricks-cloud)**.
+* Do you work in a **cybersecurity company**? Do you want to see your **company advertised in HackTricks**? or do you want to have access to the **latest version of the PEASS or download HackTricks in PDF**? Check the [**SUBSCRIPTION PLANS**](https://github.com/sponsors/carlospolop)!
+* Discover [**The PEASS Family**](https://opensea.io/collection/the-peass-family), our collection of exclusive [**NFTs**](https://opensea.io/collection/the-peass-family)
+* Get the [**official PEASS & HackTricks swag**](https://peass.creator-spring.com)
+* **Join the** [**💬**](https://emojipedia.org/speech-balloon/) [**Discord group**](https://discord.gg/hRep4RUj7f) or the [**telegram group**](https://t.me/peass) or **follow** me on **Twitter** [**🐦**](https://github.com/carlospolop/hacktricks/tree/7af18b62b3bdc423e11444677a6a73d4043511e9/\[https:/emojipedia.org/bird/README.md)[**@carlospolopm**](https://twitter.com/carlospolopm)**.**
+* **Share your hacking tricks by submitting PRs to the** [**hacktricks repo**](https://github.com/carlospolop/hacktricks) **and** [**hacktricks-cloud repo**](https://github.com/carlospolop/hacktricks-cloud).
 
 </details>
-
-

@@ -4,7 +4,7 @@
 
 <details>
 
-<summary><a href="https://www.twitch.tv/hacktricks_live/schedule"><strong>🎙️ HackTricks LIVE Twitch</strong></a> <strong>Wednesdays 5.30pm (UTC) 🎙️ -</strong> <a href="https://www.youtube.com/@hacktricks_LIVE"><strong>🎥 Youtube 🎥</strong></a></summary>
+<summary>📝<a href="https://www.twitch.tv/hacktricks_live/schedule"> <strong></strong> </a><mark style="color:blue;"><strong>Breached Write Content</strong></mark><strong> Wednesdays</strong></summary>
 
 * Do you work in a **cybersecurity company**? Do you want to see your **company advertised in HackTricks**? or do you want to have access to the **latest version of the PEASS or download HackTricks in PDF**? Check the [**SUBSCRIPTION PLANS**](https://github.com/sponsors/carlospolop)!
 * Discover [**The PEASS Family**](https://opensea.io/collection/the-peass-family), our collection of exclusive [**NFTs**](https://opensea.io/collection/the-peass-family)
@@ -35,7 +35,7 @@ The cluster is the smallest unit of size in NTFS and the size of the cluster dep
 
 As the **smallest** size unit of NTFS is a **cluster**. Each file will be occupying several complete clusters. Then, it's highly probable that **each file occupies more space than necessary**. These **unused** **spaces** **booked** by a file which is called a **slacking** **space** and people could take advantage of this area to **hide** **information**.
 
-![](<../../../.gitbook/assets/image (498).png>)
+![](../../../.gitbook/assets/image%20\(498\).png)
 
 ### **NTFS boot sector**
 
@@ -76,29 +76,29 @@ NTFS reserves the first 16 records of the table for special information:
 
 ### Each entry of the MFT looks like the following:
 
-![](<../../../.gitbook/assets/image (499).png>)
+![](../../../.gitbook/assets/image%20\(499\).png)
 
 Note how each entry starts with "FILE". Each entry occupies 1024 bits. So after 1024 bit from the start of an MFT entry, you will find the next one.
 
 Using the [**Active Disk Editor**](https://www.disk-editor.org/index.html) it's very easy to inspect the entry of a file in the MFT. Just right click on the file and then click "Inspect File Record"
 
-![](<../../../.gitbook/assets/image (500).png>)
+![](../../../.gitbook/assets/image%20\(500\).png)
 
-![](<../../../.gitbook/assets/image (501).png>)
+![](../../../.gitbook/assets/image%20\(501\).png)
 
 Checking the **"In use**" flag it's very easy to know if a file was deleted (a value of **0x0 means deleted**).
 
-![](<../../../.gitbook/assets/image (510).png>)
+![](../../../.gitbook/assets/image%20\(510\).png)
 
 It's also possible to recover deleted files using FTKImager:
 
-![](<../../../.gitbook/assets/image (502).png>)
+![](../../../.gitbook/assets/image%20\(502\).png)
 
 ### MFT Attributes
 
 Each MFT entry has several attributes as the following image indicates:
 
-![](<../../../.gitbook/assets/image (506).png>)
+![](../../../.gitbook/assets/image%20\(506\).png)
 
 Each attribute indicates some entry information identified by the type:
 
@@ -124,7 +124,7 @@ Each attribute indicates some entry information identified by the type:
 
 For example the **type 48 (0x30)** identifies the **file name**:
 
-![](<../../../.gitbook/assets/image (508).png>)
+![](../../../.gitbook/assets/image%20\(508\).png)
 
 It is also useful to understand that **these attributes can be resident** (meaning, they exist within a given MFT record) or **nonresident** (meaning, they exist outside a given MFT record, elsewhere on the disk, and are simply referenced within the record). For example, if the attribute **$Data is resident**, this means that the **whole file is saved in the MFT**, if it's nonresident, then the content of the file is in another part of the file system.
 
@@ -148,18 +148,18 @@ Some interesting attributes:
 * [$Data](https://flatcap.org/linux-ntfs/ntfs/attributes/data.html) (among others):
   * Contains the file's data or the indication of the sectors where the data resides. In the following example, the attribute data is not resident so the attribute gives information about the sectors where the data resides.
 
-![](<../../../.gitbook/assets/image (507) (1) (1).png>)
+![](../../../.gitbook/assets/image%20\(507\)%20\(1\)%20\(1\).png)
 
-![](<../../../.gitbook/assets/image (509).png>)
+![](../../../.gitbook/assets/image%20\(509\).png)
 
 ### NTFS timestamps
 
-![](<../../../.gitbook/assets/image (512).png>)
+![](../../../.gitbook/assets/image%20\(512\).png)
 
 Another useful tool to analyze the MFT is [**MFT2csv**](https://github.com/jschicht/Mft2Csv) (select the mft file or the image and press dump all and extract to extract all the objects).\
 This program will extract all the MFT data and present it in CSV format. It can also be used to dump files.
 
-![](<../../../.gitbook/assets/image (513).png>)
+![](../../../.gitbook/assets/image%20\(513\).png)
 
 ### $LOGFILE
 
@@ -169,11 +169,11 @@ These logs are useful for the MFT to rebuild the file system in case some kind o
 To inspect the `$LOGFILE` you need to extract it and inspect the `$MFT` previously with [**MFT2csv**](https://github.com/jschicht/Mft2Csv).\
 Then run [**LogFileParser**](https://github.com/jschicht/LogFileParser) against this file and select the exported `$LOGFILE` file and the CVS of the inspection of the `$MFT`. You will obtain a CSV file with the logs of the file system activity recorded by the `$LOGFILE` log.
 
-![](<../../../.gitbook/assets/image (515).png>)
+![](../../../.gitbook/assets/image%20\(515\).png)
 
 Filtering by filenames you can see **all the actions performed against a file**:
 
-![](<../../../.gitbook/assets/image (514).png>)
+![](../../../.gitbook/assets/image%20\(514\).png)
 
 ### $USNJnrl
 
@@ -183,7 +183,7 @@ To inspect this file you can use the tool [**UsnJrnl2csv**](https://github.com/j
 
 Filtering by the filename it's possible to see **all the actions performed against a file**. Also, you can find the `MFTReference` in the parent folder. Then looking at that `MFTReference` you can find **information from the parent folder.**
 
-![](<../../../.gitbook/assets/image (516).png>)
+![](../../../.gitbook/assets/image%20\(516\).png)
 
 ### $I30
 
@@ -191,7 +191,7 @@ Every **directory** in the file system contains an **`$I30`** **attribute** that
 
 You can get the `$I30` file of a directory from the **FTK Imager** and inspect it with the tool [Indx2Csv](https://github.com/jschicht/Indx2Csv).
 
-![](<../../../.gitbook/assets/image (519).png>)
+![](../../../.gitbook/assets/image%20\(519\).png)
 
 With this data, you can find **information about the file changes performed inside the folder** but note that the deletion time of a file isn't saved inside this log. However, you can see that **last modified date** of the **`$I30` file**, and if the **last action performed** over the directory is the **deletion** of a file, the times may be the same.
 
@@ -199,7 +199,7 @@ With this data, you can find **information about the file changes performed insi
 
 The **`$BitMap`** is a special file within the NTFS file system. This file keeps **track of all of the used and unused clusters** on an NTFS volume. When a file takes up space on the NTFS volume the location used is marked out in the `$BitMap`.
 
-![](<../../../.gitbook/assets/image (523).png>)
+![](../../../.gitbook/assets/image%20\(523\).png)
 
 ### ADS (Alternate Data Stream)
 
@@ -208,11 +208,11 @@ In this [page you can see different ways to create/access/discover alternate dat
 
 Using the tool [**AlternateStreamView**](https://www.nirsoft.net/utils/alternate\_data\_streams.html) you can search and export all the files with some ADS.
 
-![](<../../../.gitbook/assets/image (518).png>)
+![](../../../.gitbook/assets/image%20\(518\).png)
 
 Using the FTK imager and double clicking on a file with ADS you can **access the ADS data**:
 
-![](<../../../.gitbook/assets/image (517).png>)
+![](../../../.gitbook/assets/image%20\(517\).png)
 
 If you find an ADS called **`Zone.Identifier`** (see the above image), this usually contains **information about how the file was downloaded**. There would be a "ZoneId" field with the following info:
 
@@ -233,7 +233,7 @@ Moreover, different software may store additional information:
 
 <details>
 
-<summary><a href="https://www.twitch.tv/hacktricks_live/schedule"><strong>🎙️ HackTricks LIVE Twitch</strong></a> <strong>Wednesdays 5.30pm (UTC) 🎙️ -</strong> <a href="https://www.youtube.com/@hacktricks_LIVE"><strong>🎥 Youtube 🎥</strong></a></summary>
+<summary>📝<a href="https://www.twitch.tv/hacktricks_live/schedule"> <strong></strong> </a><mark style="color:blue;"><strong>Breached Write Content</strong></mark><strong> Wednesdays</strong></summary>
 
 * Do you work in a **cybersecurity company**? Do you want to see your **company advertised in HackTricks**? or do you want to have access to the **latest version of the PEASS or download HackTricks in PDF**? Check the [**SUBSCRIPTION PLANS**](https://github.com/sponsors/carlospolop)!
 * Discover [**The PEASS Family**](https://opensea.io/collection/the-peass-family), our collection of exclusive [**NFTs**](https://opensea.io/collection/the-peass-family)

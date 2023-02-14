@@ -2,7 +2,7 @@
 
 <details>
 
-<summary><a href="https://www.twitch.tv/hacktricks_live/schedule"><strong>🎙️ HackTricks LIVE Twitch</strong></a> <strong>Wednesdays 5.30pm (UTC) 🎙️ -</strong> <a href="https://www.youtube.com/@hacktricks_LIVE"><strong>🎥 Youtube 🎥</strong></a></summary>
+<summary>📝<a href="https://www.twitch.tv/hacktricks_live/schedule"> <strong></strong> </a><mark style="color:blue;"><strong>Breached Write Content</strong></mark><strong> Wednesdays</strong></summary>
 
 * Do you work in a **cybersecurity company**? Do you want to see your **company advertised in HackTricks**? or do you want to have access to the **latest version of the PEASS or download HackTricks in PDF**? Check the [**SUBSCRIPTION PLANS**](https://github.com/sponsors/carlospolop)!
 * Discover [**The PEASS Family**](https://opensea.io/collection/the-peass-family), our collection of exclusive [**NFTs**](https://opensea.io/collection/the-peass-family)
@@ -107,7 +107,7 @@ For example, if you see the same **Google Analytics ID** or the same **Adsense I
 
 There are some pages and tools that let you search by these trackers and more:
 
-* ****[**Udon**](https://github.com/dhn/udon)****
+* [**Udon**](https://github.com/dhn/udon)
 * [**BuiltWith**](https://builtwith.com)
 * [**Sitesleuth**](https://www.sitesleuth.io)
 * [**Publicwww**](https://publicwww.com)
@@ -678,7 +678,7 @@ There are several tools out there that will perform part of the proposed actions
 
 <details>
 
-<summary><a href="https://www.twitch.tv/hacktricks_live/schedule"><strong>🎙️ HackTricks LIVE Twitch</strong></a> <strong>Wednesdays 5.30pm (UTC) 🎙️ -</strong> <a href="https://www.youtube.com/@hacktricks_LIVE"><strong>🎥 Youtube 🎥</strong></a></summary>
+<summary>📝<a href="https://www.twitch.tv/hacktricks_live/schedule"> <strong></strong> </a><mark style="color:blue;"><strong>Breached Write Content</strong></mark><strong> Wednesdays</strong></summary>
 
 * Do you work in a **cybersecurity company**? Do you want to see your **company advertised in HackTricks**? or do you want to have access to the **latest version of the PEASS or download HackTricks in PDF**? Check the [**SUBSCRIPTION PLANS**](https://github.com/sponsors/carlospolop)!
 * Discover [**The PEASS Family**](https://opensea.io/collection/the-peass-family), our collection of exclusive [**NFTs**](https://opensea.io/collection/the-peass-family)

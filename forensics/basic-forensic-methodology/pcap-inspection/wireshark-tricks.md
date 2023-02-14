@@ -4,7 +4,7 @@
 
 <details>
 
-<summary><a href="https://www.twitch.tv/hacktricks_live/schedule"><strong>🎙️ HackTricks LIVE Twitch</strong></a> <strong>Wednesdays 5.30pm (UTC) 🎙️ -</strong> <a href="https://www.youtube.com/@hacktricks_LIVE"><strong>🎥 Youtube 🎥</strong></a></summary>
+<summary>📝<a href="https://www.twitch.tv/hacktricks_live/schedule"> <strong></strong> </a><mark style="color:blue;"><strong>Breached Write Content</strong></mark><strong> Wednesdays</strong></summary>
 
 * Do you work in a **cybersecurity company**? Do you want to see your **company advertised in HackTricks**? or do you want to have access to the **latest version of the PEASS or download HackTricks in PDF**? Check the [**SUBSCRIPTION PLANS**](https://github.com/sponsors/carlospolop)!
 * Discover [**The PEASS Family**](https://opensea.io/collection/the-peass-family), our collection of exclusive [**NFTs**](https://opensea.io/collection/the-peass-family)
@@ -31,43 +31,43 @@ The following tutorials are amazing to learn some cool basic tricks:
 
 Clicking on _**Analyze** --> **Expert Information**_ you will have an **overview** of what is happening in the packets **analyzed**:
 
-![](<../../../.gitbook/assets/image (570).png>)
+![](../../../.gitbook/assets/image%20\(570\).png)
 
 **Resolved Addresses**
 
 Under _**Statistics --> Resolved Addresses**_ you can find several **information** that was "**resolved**" by wireshark like port/transport to protocol, MAC to the manufacturer, etc. It is interesting to know what is implicated in the communication.
 
-![](<../../../.gitbook/assets/image (571).png>)
+![](../../../.gitbook/assets/image%20\(571\).png)
 
 **Protocol Hierarchy**
 
 Under _**Statistics --> Protocol Hierarchy**_ you can find the **protocols** **involved** in the communication and data about them.
 
-![](<../../../.gitbook/assets/image (572).png>)
+![](../../../.gitbook/assets/image%20\(572\).png)
 
 **Conversations**
 
 Under _**Statistics --> Conversations**_ you can find a **summary of the conversations** in the communication and data about them.
 
-![](<../../../.gitbook/assets/image (573).png>)
+![](../../../.gitbook/assets/image%20\(573\).png)
 
 **Endpoints**
 
 Under _**Statistics --> Endpoints**_ you can find a **summary of the endpoints** in the communication and data about each of them.
 
-![](<../../../.gitbook/assets/image (575).png>)
+![](../../../.gitbook/assets/image%20\(575\).png)
 
 **DNS info**
 
 Under _**Statistics --> DNS**_ you can find statistics about the DNS request captured.
 
-![](<../../../.gitbook/assets/image (577).png>)
+![](../../../.gitbook/assets/image%20\(577\).png)
 
 **I/O Graph**
 
 Under _**Statistics --> I/O Graph**_ you can find a **graph of the communication.**
 
-![](<../../../.gitbook/assets/image (574).png>)
+![](../../../.gitbook/assets/image%20\(574\).png)
 
 ### Filters
 
@@ -91,11 +91,11 @@ Practice: [https://www.malware-traffic-analysis.net/](https://www.malware-traffi
 
 You can add a column that shows the Host HTTP header:
 
-![](<../../../.gitbook/assets/image (403).png>)
+![](../../../.gitbook/assets/image%20\(403\).png)
 
 And a column that add the Server name from an initiating HTTPS connection (**ssl.handshake.type == 1**):
 
-![](<../../../.gitbook/assets/image (408) (1).png>)
+![](../../../.gitbook/assets/image%20\(408\)%20\(1\).png)
 
 ## Identifying local hostnames
 
@@ -103,11 +103,11 @@ And a column that add the Server name from an initiating HTTPS connection (**ssl
 
 In current Wireshark instead of `bootp` you need to search for `DHCP`
 
-![](<../../../.gitbook/assets/image (404).png>)
+![](../../../.gitbook/assets/image%20\(404\).png)
 
 ### From NBNS
 
-![](<../../../.gitbook/assets/image (405).png>)
+![](../../../.gitbook/assets/image%20\(405\).png)
 
 ## Decrypting TLS
 
@@ -115,7 +115,7 @@ In current Wireshark instead of `bootp` you need to search for `DHCP`
 
 _edit>preference>protocol>ssl>_
 
-![](<../../../.gitbook/assets/image (98).png>)
+![](../../../.gitbook/assets/image%20\(98\).png)
 
 Press _Edit_ and add all the data of the server and the private key (_IP, Port, Protocol, Key file and password_)
 
@@ -126,11 +126,11 @@ To detect this search inside the environment for to variable `SSLKEYLOGFILE`
 
 A file of shared keys will look like this:
 
-![](<../../../.gitbook/assets/image (99).png>)
+![](../../../.gitbook/assets/image%20\(99\).png)
 
 To import this in wireshark go to \_edit > preference > protocol > ssl > and import it in (Pre)-Master-Secret log filename:
 
-![](<../../../.gitbook/assets/image (100).png>)
+![](../../../.gitbook/assets/image%20\(100\).png)
 
 ## ADB communication
 
@@ -165,7 +165,7 @@ f.close()
 
 <details>
 
-<summary><a href="https://www.twitch.tv/hacktricks_live/schedule"><strong>🎙️ HackTricks LIVE Twitch</strong></a> <strong>Wednesdays 5.30pm (UTC) 🎙️ -</strong> <a href="https://www.youtube.com/@hacktricks_LIVE"><strong>🎥 Youtube 🎥</strong></a></summary>
+<summary>📝<a href="https://www.twitch.tv/hacktricks_live/schedule"> <strong></strong> </a><mark style="color:blue;"><strong>Breached Write Content</strong></mark><strong> Wednesdays</strong></summary>
 
 * Do you work in a **cybersecurity company**? Do you want to see your **company advertised in HackTricks**? or do you want to have access to the **latest version of the PEASS or download HackTricks in PDF**? Check the [**SUBSCRIPTION PLANS**](https://github.com/sponsors/carlospolop)!
 * Discover [**The PEASS Family**](https://opensea.io/collection/the-peass-family), our collection of exclusive [**NFTs**](https://opensea.io/collection/the-peass-family)

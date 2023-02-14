@@ -4,7 +4,7 @@
 
 <details>
 
-<summary><a href="https://www.twitch.tv/hacktricks_live/schedule"><strong>🎙️ HackTricks LIVE Twitch</strong></a> <strong>Wednesdays 5.30pm (UTC) 🎙️ -</strong> <a href="https://www.youtube.com/@hacktricks_LIVE"><strong>🎥 Youtube 🎥</strong></a></summary>
+<summary>📝<a href="https://www.twitch.tv/hacktricks_live/schedule"> <strong></strong> </a><mark style="color:blue;"><strong>Breached Write Content</strong></mark><strong> Wednesdays</strong></summary>
 
 * Do you work in a **cybersecurity company**? Do you want to see your **company advertised in HackTricks**? or do you want to have access to the **latest version of the PEASS or download HackTricks in PDF**? Check the [**SUBSCRIPTION PLANS**](https://github.com/sponsors/carlospolop)!
 * Discover [**The PEASS Family**](https://opensea.io/collection/the-peass-family), our collection of exclusive [**NFTs**](https://opensea.io/collection/the-peass-family)
@@ -25,13 +25,13 @@ It's allocated in the **first sector of the disk after the 446B of the boot code
 It allows up to **4 partitions** (at most **just 1** can be active/**bootable**). However, if you need more partitions you can use **extended partitions**. The **final byte** of this first sector is the boot record signature **0x55AA**. Only one partition can be marked as active.\
 MBR allows **max 2.2TB**.
 
-![](<../../../.gitbook/assets/image (489).png>)
+![](../../../.gitbook/assets/image%20\(489\).png)
 
-![](<../../../.gitbook/assets/image (490).png>)
+![](../../../.gitbook/assets/image%20\(490\).png)
 
 From the **bytes 440 to the 443** of the MBR you can find the **Windows Disk Signature** (if Windows is used). The logical drive letter of the hard disk depends on the Windows Disk Signature. Changing this signature could prevent Windows from booting (tool: [**Active Disk Editor**](https://www.disk-editor.org/index.html)**)**.
 
-![](<../../../.gitbook/assets/image (493).png>)
+![](../../../.gitbook/assets/image%20\(493\).png)
 
 **Format**
 
@@ -61,7 +61,7 @@ From the **bytes 440 to the 443** of the MBR you can find the **Windows Disk Sig
 
 In order to mount an MBR in Linux you first need to get the start offset (you can use `fdisk` and the `p` command)
 
-![](<../../../.gitbook/assets/image (413) (3) (3) (3) (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (2).png>)
+![](../../../.gitbook/assets/image%20\(413\)%20\(3\)%20\(3\)%20\(3\)%20\(2\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(1\)%20\(2\).png)
 
 And then use the following code
 
@@ -92,7 +92,7 @@ GPT also stores **cyclic redundancy check (CRC)** values to check that its data 
 
 For limited backward compatibility, the space of the legacy MBR is still reserved in the GPT specification, but it is now used in a **way that prevents MBR-based disk utilities from misrecognizing and possibly overwriting GPT disks**. This is referred to as a protective MBR.
 
-![](<../../../.gitbook/assets/image (491).png>)
+![](../../../.gitbook/assets/image%20\(491\).png)
 
 **Hybrid MBR (LBA 0 + GPT)**
 
@@ -134,7 +134,7 @@ The partition table header defines the usable blocks on the disk. It also define
 
 **Partitions Types**
 
-![](<../../../.gitbook/assets/image (492).png>)
+![](../../../.gitbook/assets/image%20\(492\).png)
 
 More partition types in [https://en.wikipedia.org/wiki/GUID\_Partition\_Table](https://en.wikipedia.org/wiki/GUID\_Partition\_Table)
 
@@ -142,7 +142,7 @@ More partition types in [https://en.wikipedia.org/wiki/GUID\_Partition\_Table](h
 
 After mounting the forensics image with [**ArsenalImageMounter**](https://arsenalrecon.com/downloads/), you can inspect the first sector using the Windows tool [**Active Disk Editor**](https://www.disk-editor.org/index.html)**.** In the following image an **MBR** was detected on the **sector 0** and interpreted:
 
-![](<../../../.gitbook/assets/image (494).png>)
+![](../../../.gitbook/assets/image%20\(494\).png)
 
 If it was a **GPT table instead of an MBR** it should appear the signature _EFI PART_ in the **sector 1** (which in the previous image is empty).
 
@@ -160,7 +160,7 @@ If it was a **GPT table instead of an MBR** it should appear the signature _EFI 
 
 The **FAT (File Allocation Table)** file system is named for its method of organization, the file allocation table, which resides at the beginning of the volume. To protect the volume, **two copies** of the table are kept, in case one becomes damaged. In addition, the file allocation tables and the root folder must be stored in a **fixed location** so that the files needed to start the system can be correctly located.
 
-![](<../../../.gitbook/assets/image (495).png>)
+![](../../../.gitbook/assets/image%20\(495\).png)
 
 The minimum space unit used by this file system is a **cluster, typically 512B** (which is composed of a number of sectors).
 
@@ -256,7 +256,7 @@ You may notice that even performing that action there might be **other parts whe
 
 <details>
 
-<summary><a href="https://www.twitch.tv/hacktricks_live/schedule"><strong>🎙️ HackTricks LIVE Twitch</strong></a> <strong>Wednesdays 5.30pm (UTC) 🎙️ -</strong> <a href="https://www.youtube.com/@hacktricks_LIVE"><strong>🎥 Youtube 🎥</strong></a></summary>
+<summary>📝<a href="https://www.twitch.tv/hacktricks_live/schedule"> <strong></strong> </a><mark style="color:blue;"><strong>Breached Write Content</strong></mark><strong> Wednesdays</strong></summary>
 
 * Do you work in a **cybersecurity company**? Do you want to see your **company advertised in HackTricks**? or do you want to have access to the **latest version of the PEASS or download HackTricks in PDF**? Check the [**SUBSCRIPTION PLANS**](https://github.com/sponsors/carlospolop)!
 * Discover [**The PEASS Family**](https://opensea.io/collection/the-peass-family), our collection of exclusive [**NFTs**](https://opensea.io/collection/the-peass-family)
